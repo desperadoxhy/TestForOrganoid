@@ -12,8 +12,8 @@
     </div>
     </div>
     <div class="meau">
-      <div class="meauItem">
-        <div class="meauTitle">Question Answering</div>
+      <div class="meauItem" @click="Push('/test')">
+        <div class="meauTitle">点我跳转</div>
         <div class="meauDiscript" style="margin-top: 25px;">The frontend of the QAs can receive a natural language</div>
         <div class="meauDiscript">question entered by users, return the answer information</div>
         <div class="meauDiscript" style="margin-bottom: 50px;">and source information of the question.</div>
@@ -37,8 +37,15 @@
 </template>
 
 <script>
+
+
 export default {
-  name: "HomeView"
+  name: "HomeView",
+  methods: {
+    Push(index) {
+      this.$router.push(index)
+    }
+  }
 }
 </script>
 
